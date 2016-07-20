@@ -9,11 +9,11 @@
 
 Name:		%{?scl_prefix}nodejs-through
 Version:	2.3.8
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	simplified stream construction
 Url:		https://github.com/dominictarr/through
 Source0:	https://registry.npmjs.org/%{npm_name}/-/%{npm_name}-%{version}.tgz
-License:	MIT
+License:	MIT and ASL 2.0
 
 BuildArch:	noarch
 ExclusiveArch:	%{nodejs_arches} noarch
@@ -57,6 +57,9 @@ set -e; for t in test/*.js; do node $t; done
 %license LICENSE.APACHE2 LICENSE.MIT
 
 %changelog
+* Tue Jun 14 2016 Zuzana Svetlikova <zsvetlik@redhat.com> - 2.3.8-3
+- Resolves: #1334856, add ASL 2.0
+
 * Sun Feb 14 2016 Zuzana Svetlikova <zsvetlik@redhat.com> - 2.3.8-2
 - rebuilt
 
